@@ -1,0 +1,19 @@
+
+
+# Dpram configuration
+#
+
+menu "Dpram support"
+
+config DPRAM
+       tristate "Using smem as dpram"
+	   depends on MACH_TREBON || MACH_AMAZING_CDMA
+       ---help---
+		Include this for using smem as dpram for communication between modem and appl.
+config DPRAM_WHITELIST
+       bool "Using dpram to send whitelist port infos"
+	   depends on MACH_TREBON
+       ---help---
+		Include this for using whitelist.
+
+endmenu
